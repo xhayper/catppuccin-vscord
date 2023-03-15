@@ -1,61 +1,25 @@
 {
-  "publisher": "Catppuccin",
-  "name": "catppuccin-vsc-icons",
-  "displayName": "Catppuccin Icons for VSCode",
+  "name": "catppuccin-vscord",
   "type": "module",
-  "version": "0.1.0",
-  "description": "🦌 Soothing pastel icon theme for VSCode",
-  "author": "prazdevs",
+  "version": "0.0.0",
+  "description": "🚦 Soothing pastel icon theme for VSCord",
+  "contributors": [
+    "prazdevs",
+    "xhayper"
+  ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/catppuccin/vscode-icons"
-  },
+  "repository": "https://github.com/catppuccin/vscord",
   "keywords": [
     "catppuccin",
     "theme",
     "fancy",
     "pastel-colors",
-    "vscode",
-    "vscode-theme",
-    "vscode-icons",
-    "vscode-extension"
+    "vscord"
   ],
-  "categories": ["Themes"],
-  "icon": "logo.png",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "vscode": "^1.69.0"
-  },
-  "contributes": {
-    "iconThemes": [
-      {
-        "id": "catppuccin-mocha",
-        "label": "Catppuccin Mocha",
-        "path": "themes/mocha/theme.json"
-      },
-      {
-        "id": "catppuccin-latte",
-        "label": "Catppuccin Latte",
-        "path": "themes/latte/theme.json"
-      },
-      {
-        "id": "catppuccin-frappe",
-        "label": "Catppuccin Frappé",
-        "path": "themes/frappe/theme.json"
-      },
-      {
-        "id": "catppuccin-macchiato",
-        "label": "Catppuccin Macchiato",
-        "path": "themes/macchiato/theme.json"
-      }
-    ]
-  },
   "scripts": {
-    "build": "yarn build:themes && yarn build:preview",
+    "build": "yarn build:themes && yarn build:images && yarn build:preview",
     "build:icons": "tsx scripts/icons.ts",
+    "build:images": "tsx scripts/images.ts",
     "build:themes": "tsx scripts/themes.ts",
     "build:preview": "tsx scripts/preview.ts",
     "catwalk": "tsx scripts/catwalk.ts",
@@ -63,7 +27,6 @@
     "integrity": "tsx scripts/integrity.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "package": "vsce package --no-dependencies -o dist",
     "release": "bumpp -t \"v%s\" -c \"chore: release v\""
   },
   "devDependencies": {
@@ -71,7 +34,6 @@
     "@catppuccin/palette": "^0.1.6",
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^18.14.0",
-    "@vscode/vsce": "^2.18.0",
     "bumpp": "^9.0.0",
     "chokidar-cli": "^3.0.0",
     "colorsea": "^1.1.0",
